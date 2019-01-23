@@ -1,0 +1,86 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);body {
+  margin: 0;
+  background-color: whitesmoke;
+  font-family: 'Lato', sans-serif; }
+  body #body {
+    position: relative;
+    z-index: 1; }
+    body #body header {
+      width: 100%;
+      height: 40px;
+      background: #ca3434; }
+      body #body header #user-ui {
+        width: 150px;
+        height: calc(100% - 20px);
+        padding: 10px;
+        float: right;
+        display: flex; }
+    body #body #page {
+      display: flex;
+      height: calc(100% - 40px); }
+      body #body #page aside {
+        width: 200px;
+        height: 100%;
+        background: #34363b; }
+        body #body #page aside ul {
+          padding: 10px;
+          margin: 0;
+          background: #2a2b2f;
+          color: white;
+          list-style: none; }
+          body #body #page aside ul li {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 11px; }
+            body #body #page aside ul li:hover {
+              background-color: red;
+              cursor: pointer; }
+          body #body #page aside ul .header {
+            font-size: 14px; }
+    body #body #popup {
+      position: absolute;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.4); }
+      body #body #popup #signin-window {
+        width: 600px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: white; }
+        body #body #popup #signin-window #header {
+          width: 100%; }
+        body #body #popup #signin-window #content {
+          display: flex; }
+          body #body #popup #signin-window #content #register-window {
+            width: 50%;
+            padding: 10px; }
+            body #body #popup #signin-window #content #register-window label, body #body #popup #signin-window #content #register-window input, body #body #popup #signin-window #content #register-window button, body #body #popup #signin-window #content #register-window h2 {
+              display: block;
+              width: calc(100% - 20px);
+              margin: 10px; }
+            body #body #popup #signin-window #content #register-window label {
+              color: #999; }
+            body #body #popup #signin-window #content #register-window input, body #body #popup #signin-window #content #register-window button {
+              padding: 10px; }
+            body #body #popup #signin-window #content #register-window button, body #body #popup #signin-window #content #register-window label {
+              margin-top: 20px; }
+            body #body #popup #signin-window #content #register-window input {
+              border: none;
+              border-bottom: 1px solid #999;
+              outline: 0;
+              transition: all 1s ease; }
+            body #body #popup #signin-window #content #register-window button {
+              border: none;
+              background: #ccc; }
+            body #body #popup #signin-window #content #register-window #error-box {
+              width: calc(100% - 40px);
+              background: red;
+              color: white;
+              margin: 10px;
+              padding: 10px;
+              list-style: none; }
+            body #body #popup #signin-window #content #register-window .error {
+              border-bottom: 3px solid red; }

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700');
+
+$primaryColor:  #ca3434;
+
+$ui-primary: #999;
+$ui-secundary: #ccc;
+
+body{
+    margin: 0;
+    background-color: whitesmoke;
+    font-family: 'Lato', sans-serif;
+
+    #body{
+        position: relative;
+        z-index: 1;
+
+        header{
+            width: 100%;
+            height: 40px;
+            background: $primaryColor;
+
+            #user-ui{
+                width: 150px;
+                height: calc(100% - 20px);
+                padding: 10px;
+                float: right;
+                display: flex;
+            }
+        }
+
+        #page{
+            display: flex;
+            height: calc(100% - 40px);
+
+            aside{
+                width: 200px;
+                height: 100%;
+                background: #34363b;
+
+                ul{
+                    padding: 10px;
+                    margin: 0;
+                    background: #2a2b2f;
+                    color: white;
+                    list-style: none;
+
+                    li{
+                        width: calc(100% - 20px);
+                        padding: 10px;
+                        font-size: 11px;
+
+                        &:hover{
+                            background-color: red;
+                            cursor: pointer;
+                        }
+                    }
+
+                    .header{
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+
+        #popup{
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.4);
+
+            #signin-window{
+                width: 600px;
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                background: white;
+
+                #header{
+                    width: 100%;
+                }
+
+                #content{
+                    display: flex;
+
+                    #register-window{
+                        width: 50%;
+                        padding: 10px;
+
+                        label, input, button, h2{
+                            display: block;
+                            width: calc(100% - 20px);
+                            margin: 10px;
+                        }
+
+                        label{
+                            color: $ui-primary;
+                        }
+
+                        input, button{
+                            padding: 10px;
+                        }
+
+                        button, label{
+                            margin-top: 20px;
+                        }
+
+                        input{
+                            border: none;
+                            border-bottom: 1px solid $ui-primary;
+                            outline: 0;
+                            transition: all 1s ease;
+                        }
+
+                        button{
+                            border: none;
+                            background: $ui-secundary;
+                        }
+
+                        #error-box{
+                            width: calc(100% - 40px);
+                            background: red;
+                            color: white;
+                            margin: 10px;
+                            padding: 10px;
+                            list-style: none;
+                        }
+
+                        .error{
+                            border-bottom: 3px solid red;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
